@@ -1,0 +1,186 @@
+.waitlist_body{
+    background: url("../assets/waitlist_circle.svg");
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+     background-repeat: no-repeat; /* prevent tiling */
+     background-position: center; /* adjust position */
+     background-size: cover; 
+     display: flex;
+     flex-direction: column;
+     gap:70px;
+     
+    
+}
+.header_img{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+
+.waitlist_text{
+    display: flex;
+     align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap:50px;
+
+}
+.waitlist_left_img{
+    display: flex;
+    flex-direction: column;
+    gap:150px;
+    opacity: 0;               
+  transform: scale(0.8);    
+  animation: popUp 1.2s ease-out forwards; 
+  animation-delay: 0.3s;
+} 
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05); /* slight overshoot for "pop" */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);    /* settle back to normal size */
+  }
+}
+
+.waitlist_first_text{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    /* margin-right: 150px; */
+}
+.main_cloud{
+width: 150px;
+height: 136px;
+}
+.waitlist_first_text h1{
+color: var(--color-black-solid, #000);
+text-align: center;
+font-family: "Instrument Sans";
+font-size: 48px;
+font-style: normal;
+font-weight: 500;
+line-height: 56px; /* 116.667% */
+letter-spacing: -0.32px;
+}
+
+.waitlist_second_text h2{
+    color: var(--color-grey-63, #A1A1A1);
+text-align: center;
+font-family: Geist;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 140% */
+}
+.waitlist_right_img{
+     display: flex;
+    flex-direction: column;
+    gap:150px;
+    opacity: 0;               
+    transform: scale(0.8);    
+    animation: popUp 1.2s ease-out forwards; 
+    animation-delay: 0.3s;
+}
+.waitlist_inputs{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    margin-top: 30px;
+}
+.waitlist_email{
+    color: var(--color-azure-23, #343A40);
+font-family: Geist;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.1px;
+
+outline: none;
+display:flex;
+border-radius: 32px;
+border: var(--stroke-weight-1, 0.996px) solid var(--color-grey-93, #E9ECEF);
+background: var(--color-white-solid, #FFF);
+padding: 9.5px 17px;
+width:300px;
+height:50px;
+}
+.waitlist_button {
+  display: flex;
+  align-items: center;         
+  justify-content: center;    
+  gap: 8px;                    
+
+  border-radius: 32px;
+  border: 0.812px solid rgba(255, 255, 255, 0.10);
+  background: radial-gradient(50% 50% at 50% 50%, #794CFF 0%, #5F2CF7 100%);
+  
+  color: #FFF;
+  font-family: "Instrument Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  width: 210px;
+  height: 50px;
+  padding: 0 20px;             /* horizontal padding only */
+  cursor: pointer;
+  box-shadow: 0px 6px 12px rgba(26, 1, 51, 0.5);
+}
+
+.waitlist_arrow {
+  width: 20px;
+}
+.waitlist_footer{
+    display: flex;
+    gap:250px;
+    justify-content: center;
+    align-items: center;
+   
+}
+.waitlist_footer h3{
+    color:  #B8B8B8;
+    text-align: center;
+    font-family: "Instrument Sans";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: -0.32px;
+}
+.waitlist_footer_img{
+    display: flex;
+    gap:5px;
+
+}
+.waitlist_footer_link{
+    display: flex;
+    gap:30px;
+     font-family:  Geist;
+    color:#B8B8B8;
+    font-size:  1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px ;
+    letter-spacing: -0.32px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+}
+
