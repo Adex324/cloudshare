@@ -1,46 +1,37 @@
-.signup_grid{
-    font-family: Geist;
-    display: flex;
-    
-   
+/* ========================
+   GLOBAL FIX
+======================== */
+
+* {
+  box-sizing: border-box;
 }
-/* .left_grid_signup{
-    background-color: #9909DD;
-    font-family: Geist;
-    margin: 20px;
-    height: 100vh;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    border-radius: 40px;
-    padding:20rem 10rem;
-    justify-content: center;
-} */
+
+.signup_grid {
+  font-family: Geist, sans-serif;
+  display: flex;
+  flex-wrap: wrap; /* prevents overflow */
+}
+
+/* ========================
+   LEFT SIDE
+======================== */
 
 .left_grid_signup {
   position: relative;
-  font-family: Geist;
-    margin: 20px;
-    height: 100vh;
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    border-radius: 40px;
-    padding:15rem 10rem;
-    justify-content: center;
+  font-family: Geist, sans-serif;
+  margin: 20px;
+  height: 100vh; /* changed from height */
+  width: calc(50% - 40px); /* prevents overflow from margins */
+  display: flex;
+  flex-direction: row;
+  border-radius: 40px;
+  padding: 20rem 10rem;
+  justify-content: center;
   overflow: hidden;
 
-   background:
-    radial-gradient(
-      circle at top left,
-      rgba(255, 255, 255, 0.35),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at top right,
-      rgba(255, 255, 255, 0.35),
-      transparent 45%
-    ),
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.35), transparent 45%),
+    radial-gradient(circle at top right, rgba(255,255,255,0.35), transparent 45%),
     linear-gradient(
       to bottom,
       #d8b3ff 0%,
@@ -53,67 +44,69 @@
     );
 }
 
-.left_grid_text{
-    padding:13rem 2rem 10rem 2rem;
-    display: flex;
-    gap:17px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.left_grid_text {
+  padding: 13rem 2rem 10rem 2rem;
+  display: flex;
+  gap: 17px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.left_grid_text h1
+ { 
+  color: #ffffff; 
+  font-weight: 600;
+   font-size: 2.4rem; 
+   line-height: 1.2; 
+   letter-spacing: -0.02em;
+    text-align: center; 
+    margin: 0; }
+  
+.left_grid_text .left_grid_text_paragraph 
+{
+   color: rgba(255, 255, 255, 0.75);
+   font-weight: 400; 
+   font-size: 1rem;
+    line-height: 1.6; 
+    max-width: 420px;
+     text-align: center; 
+     margin: 0; }
+
+/* Floating Icons Animation Fix */
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1; /* visible but subtle */
+    transform: scale(1);
+  }
 }
 
-.left_grid_text h1 {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 2.4rem;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  text-align: center;
-  margin: 0;
-}
-.left_grid_text .left_grid_text_paragraph {
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 420px;
-  text-align: center;
-  margin: 0;
-}
-.left_grid_left_img{
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    gap:150px;
-    opacity: 0;               
-  transform: scale(3.0);    
-  animation: popUp 1.2s ease-out forwards; 
+.left_grid_left_img,
+.left_grid_right_img {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  animation: popUp 1.2s ease-out forwards;
   animation-delay: 0.3s;
-} 
-.left_grid_right_img{
-    justify-content: center;
-     display: flex;
-    flex-direction: column;
-   gap:150px;
-    opacity: 0;               
-    transform: scale(0.8);    
-    animation: popUp 1.2s ease-out forwards; 
-    animation-delay: 0.3s;
 }
-.signup_options{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap:15px;
+
+/* ========================
+   SIGNUP OPTIONS
+======================== */
+
+.signup_options {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-/* .signup_option{
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    backdrop-filter: blur(12px);
-    opacity: 0.8;
-    padding: 20px 15px;
-    
-} */
+
 .signup_option {
   background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.75);
@@ -122,170 +115,206 @@
   transition: all 0.3s ease;
   width: 350px;
   display: flex;
-  gap:20px;
+  gap: 20px;
   justify-content: left;
   text-align: left;
-  
 }
 
+.signup_option:hover,
 .signup_option.active {
-  background: #ffffff;
-  color: #000000;
-}
-.signup_option:hover {
   background: #ffffff;
   color: #000000;
   cursor: pointer;
 }
-.right_grid_signup{
-     
-  font-family: Geist;
-    margin: 20px;
-    height: 100vh;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    padding:1rem 5rem; 
-    text-align: center;
-    gap:13px;
+
+/* ========================
+   RIGHT SIDE
+======================== */
+
+.right_grid_signup {
+  font-family: Geist, sans-serif;
+  margin: 20px;
+  min-height: 100vh; /* changed from height */
+  width: calc(50% - 40px);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 5rem;
+  text-align: center;
+  gap: 13px;
 }
 
+/* ========================
+   FORM
+======================== */
 
-.signup_form{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-    padding: 15px 45px;
-}
-.signup_names{
-    display: flex;
-    gap:10px;
-}
-.signup_name{
-    width: 50%;
-}
-.input_group{
-    display: flex;
-    flex-direction: column;
-    gap:15px;
-    text-align: left;
-    
-}
-.input_group input{
-    border: none;
-    background-color: #F5F5F5;
-    border-radius: 20px;
-    width: 100%;
-    padding: 18px 20px;
-    font-family: geist;
-    font-weight: 400;
-    font-size: 1.1rem;
-    outline: none;
-   
-    
-}
-.signup_btn{
-    border: none;
-    background-color: #111111;
-    border-radius: 25px;
-    width: 100%;
-    padding: 20px;
-    font-family: geist;
-    text-align: center;
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-top: 10px;
-  
-    
+.signup_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px 45px;
 }
 
- .input_group2{
-    display: flex;
-    flex-direction: column;
-    gap:15px;
-    text-align: left;
-    
-   
-    
+.signup_names {
+  display: flex;
+  gap: 10px;
 }
-.password_area{
-    border: none;
-    background-color: #F5F5F5;
-    border-radius: 20px;
-   display: flex;
-   justify-content: space-between;
-   padding-right: 20px;
-   
-    
+
+.signup_name {
+  width: 50%;
 }
-.input_group2 input{
-    border: none;
-    background-color: #F5F5F5;
-    border-radius: 20px;
-    width: 100%;
-    padding: 18px 20px;
-    font-family: geist;
-    font-weight: 400;
-    font-size: 1.1rem;
-    outline: none;
-     justify-content: space-between;
-   
-    
+
+.input_group,
+.input_group2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
 }
-/* .password_wrapper{
+
+.input_group input,
+.input_group2 input {
+  border: none;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  width: 100%;
+  padding: 18px 20px;
+  font-family: Geist, sans-serif; /* fixed typo */
+  font-weight: 400;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+/* Password */
+
+.password_area {
+  border: none;
+  background-color: #F5F5F5;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
-  
-} */
-.password_icon {
- width: 20px;
- display: flex;
-}
-.or_section{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  gap:10px;
-  padding: 5px 50px;
-}
-.or_section hr{
-   flex: 1;
-  border: none;
-  height: 1px;
-  background: #dcdcdc;
-}
-.account_option {
-  display: flex;
-  gap: 20px;            
-  
-    padding: 5px 55px;
+  padding-right: 20px;
 }
 
-.google_div,
-.apple_div {
-  flex: 1;               
+.password_icon {
+  width: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Button */
+
+.signup_btn {
+  border: none;
+  background-color: #111111;
+  border-radius: 25px;
+  width: 100%;
+  padding: 20px;
+  font-family: Geist, sans-serif;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* ========================
+   OR SECTION
+======================== */
+
+.or_section {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  padding: 5px 50px;
+}
 
+.or_section hr {
+  flex: 1;
+  border: none;
+  height: 1px;
+  background: #dcdcdc;
+}
+
+/* ========================
+   SOCIAL LOGIN
+======================== */
+
+.account_option {
+  display: flex;
+  gap: 20px;
+  padding: 5px 55px;
+}
+
+.google_div,
+.apple_div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   padding: 15px 0;
-  border: 1px solid #EDEDED;   
+  border: 1px solid #EDEDED;
   border-radius: 15px;
   font-weight: 600;
   cursor: pointer;
 }
-.already{
+
+/* ========================
+   ALREADY LOGIN
+======================== */
+
+.already {
   display: flex;
-  gap:1px;
+  gap: 1px;
   justify-content: center;
 }
-.alreadyp{
-  color:#4B4B4B
+
+.alreadyp {
+  color: #4B4B4B;
 }
-.alreadylog{
+
+.alreadylog {
   color: #111111;
-  font-weight:600 ;
+  font-weight: 600;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+
+@media (max-width: 1024px) {
+
+  .signup_grid {
+    flex-direction: column;
+  }
+
+  .left_grid_signup,
+  .right_grid_signup {
+    width: calc(100% - 40px);
+    min-height: auto;
+  }
+
+  .signup_names {
+    flex-direction: column;
+  }
+
+  .signup_name {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .left_grid_signup {
+    padding: 8rem 3rem; /* scaled proportionally */
+  }
+
+  .left_grid_text {
+    padding: 6rem 1rem;
+  }
+
+  .right_grid_signup {
+    padding: 1rem 2rem;
+  }
 }
