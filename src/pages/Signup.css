@@ -176,7 +176,7 @@
     background-color: #F5F5F5;
     border-radius: 20px;
     width: 100%;
-    padding: 20px;
+    padding: 18px 20px;
     font-family: geist;
     font-weight: 400;
     font-size: 1.1rem;
@@ -189,7 +189,7 @@
     background-color: #111111;
     border-radius: 25px;
     width: 100%;
-    padding: 24px;
+    padding: 20px;
     font-family: geist;
     text-align: center;
     color: #FFFFFF;
@@ -212,7 +212,7 @@
 .password_icon {
   position: absolute;
   right: 180px;
-  top: 59%;
+  top: 53%;
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
