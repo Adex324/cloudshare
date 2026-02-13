@@ -150,10 +150,7 @@
     gap:13px;
 }
 
-.right_grid_signup p{
-    /* margin-top: 10px;
-    color: #6B6B6B; */
-}
+
 .signup_form{
     display: flex;
     flex-direction: column;
