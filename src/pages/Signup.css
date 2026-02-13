@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: row;
     border-radius: 40px;
-    padding:20rem 10rem;
+    padding:15rem 10rem;
     justify-content: center;
   overflow: hidden;
 
@@ -145,7 +145,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding:2rem 5rem; 
+    padding:1rem 5rem; 
     text-align: center;
     gap:13px;
 }
@@ -155,7 +155,7 @@
     display: flex;
     flex-direction: column;
     gap:20px;
-    padding: 15px 35px;
+    padding: 15px 45px;
 }
 .signup_names{
     display: flex;
@@ -225,7 +225,7 @@
   text-align: center;
   align-items: center;
   gap:10px;
-  padding: 5px 45px;
+  padding: 5px 50px;
 }
 .or_section hr{
    flex: 1;
@@ -237,7 +237,7 @@
   display: flex;
   gap: 20px;            
   
-    padding: 5px 35px;
+    padding: 5px 55px;
 }
 
 .google_div,
