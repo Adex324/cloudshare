@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: row;
   border-radius: 40px;
-  padding: 20rem 10rem;
+  padding: 20rem 10rem 15rem 10rem;
   justify-content: center;
   overflow: hidden;
 
@@ -33,14 +33,14 @@
     radial-gradient(circle at top left, rgba(255,255,255,0.35), transparent 45%),
     radial-gradient(circle at top right, rgba(255,255,255,0.35), transparent 45%),
     linear-gradient(
-      to bottom,
       #d8b3ff 0%,
-      #b56cff 18%,
-      #8646EE 35%,
-      #4b1b75 50%,
-      #1a0a2e 65%,
-      #000000 85%,
-      #000000 100%
+#b56cff 10%,
+#8646EE 20%,
+#4b1b75 35%,
+#1a0a2e 50%,
+#000000 75%,
+#000000 100%
+
     );
 }
 
@@ -88,10 +88,11 @@
 
 .left_grid_left_img,
 .left_grid_right_img {
+  padding: 0px 10px 100px 10px;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 150px;
+  gap: 200px;
   animation: popUp 1.2s ease-out forwards;
   animation-delay: 0.3s;
 }
