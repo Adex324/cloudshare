@@ -111,9 +111,9 @@ const handleSubmit = (e) => {
       />
     </div>
 
-    <div className="input_group password_wrapper">
+    <div className="input_group2 password_wrapper">
       <label>Password</label>
-
+      <div className="password_area">
       <input
         type="password"
         name="password"
@@ -124,6 +124,7 @@ const handleSubmit = (e) => {
         
       />
         <img src={password_eye} alt="" className='password_icon'/>
+        </div>
     </div>
 
     <button type="submit" className="signup_btn">
